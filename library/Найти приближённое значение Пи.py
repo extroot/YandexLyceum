@@ -1,23 +1,9 @@
 from random import random as rd
+n = 100000
+k = 0.0
+for i in range(n):
+    x = rd()
+    y = rd()
+    k += x ** 2 + y ** 2 < 1.0
 
-a = 100
-limit_Nmax = 1e7
-limit_a = 1e6
-i = 0
-n_in_circ = 0
-Nmax = a
-while a < limit_a:
-    Nmax = a
-    while Nmax <= limit_Nmax:
-        n_in_circ = 0
-        i = 0
-        while i < Nmax:
-            x = (rd() % (a * 1000)) / 1000
-            y = (rd() % (a * 1000)) / 1000
-            if y * y <= (a / 2) * (a / 2) - x * x:
-                n_in_circ += 1
-            i += 1
-        Pi = (n_in_circ / Nmax) * 4
-        Nmax *= 2
-        print(a, Nmax, Pi)
-    a *= 2
+print(4 * k / n)
