@@ -3,7 +3,6 @@ BLACK = 2
 
 
 class Pawn:
-
     def __init__(self, row, col, color):
         self.row = row
         self.col = col
