@@ -2,7 +2,7 @@ from PIL import Image
 
 
 def mirror():
-    im = Image.open("image.jpg")
+    im = Image.open("../lib4 morph/image.jpg")
     pixels = im.load()  # список с пикселями
     x, y = im.size  # ширина (x) и высота (y) изображения
 
