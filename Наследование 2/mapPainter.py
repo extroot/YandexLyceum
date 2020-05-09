@@ -7,7 +7,6 @@ class Drawer:
         self.cell_size = cell_size
         self.sort = sorted(set([y for x in draw_map for y in x]))
         self.d = {x: "black" for x in self.sort}
-        self.sort = sorted(set([y for x in draw_map for y in x]))
 
     def set_color(self, number, color):
         self.d[number] = color
@@ -32,7 +31,7 @@ class Drawer:
         return im
 
 
-dr = Drawer([[1, 2, 3], [4, 5, 6], [7, 8, 9]], 20)
+dr = Drawer([[1, 2, 3], [4, 11, 11], [7, 8, 9]], 20)
 dr.d = {1: 'black', 2: 'red', 3: 'orange', 4: 'yellow', 5: 'green', 6: 'lightblue', 7: 'blue', 8: 'violet', 9: 'white'}
 print(dr.numbers())
-print(dr.draw())
+dr.draw().save("out.png")

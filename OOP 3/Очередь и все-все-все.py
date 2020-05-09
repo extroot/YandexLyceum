@@ -34,8 +34,8 @@ class Queue:
         return Queue(self.lst[other:])
 
 
-def next(q):
-    return Queue(q.lst[1:])
+def next(qq):
+    return qq.copy().next()
 
 
 q1 = Queue(1, 2, 3)
