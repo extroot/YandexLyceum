@@ -1,2 +1,0 @@
-def way(st, ):
-    pass
